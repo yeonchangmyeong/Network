@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title> Selection Page</title>
+</head>
+<meta charset="utf-8"/>
+<body>
+
+	<form action="monitoring.php" method="POST">
+    <fieldset>
+ <link rel="stylesheet" href="./selectstyle.css">
+ <nav>
+        <ul>
+            <li><a href="login.html">LoginPage</a></li>
+            <li><a href="HowToUse2.html">How To Use</a></li>
+            <li><a href="http://naver.com"target="_blank">Naver</a></li>
+            <li><a href="http://google.com"target="_blank">Google</a></li>
+            <li><a href="http://www.anyang.ac.kr/main/index.do"target="_blank">Anyang University</a></li>
+        </ul>
+    </nav>
+
+        <p style="text-align: center">
+    <br><b>캡처한 패킷을 선택해주세요:</b> <br>
+<br><br>
+    <input type="radio" name="networktype" value="TCP" checked> TCP 패킷<br>
+    <input type="radio" name="networktype" value="UDP"> UDP 패킷<br>
+    <input type="radio" name="networktype" value="ICMP"> ICMP 패킷<br>
+    <br><br>
+    <br><br>
+    <b>옵션 유형을 선택해주세요:</b>
+  <select name="choice">
+    <option value="select" selected="true" disabled="disabled">선택</option>
+    <option value="CAP">이더넷, IP 헤더 정보</option>
+    <option value="TCP">TCP 패킷 정보</option>
+    <option value="UDP">UDP 패킷 정보</option>
+    <option value="ICMP">ICMP 패킷 정보</option>
+    <option value="Clean">선택한 패킷의 데이터 삭제(TXT,DB)</option>
+    <option value="allclean">모든 데이터 삭제(TXT,DB)</option>
+    <!--option value="Destination Mac Address">Destination Mac Address</option-->
+    <!--option value="Length of Packet">Length of Packet</option-->
+  </select>
+  <br><br> </p>
+  <p style="text-align: center">
+ <link rel="stylesheet" href="./selectstyle.css">
+  
+ <input id="input" type="submit" name="submit" value="선택"><br><br><b>제출 하기를 누르시면 캡처된 데이터가 해당 DB에 INSERT 됩니다.<b>
+
+<form action="csvexport.php" method="post">
+	<br><br><input id="input" type="submit" name="test" id="test" value="엑셀파일생성" /><br><br><b>엑셀파일 생성하기 누르시면 DB내용을 csv파일로 생성합니다.<br></b>
+</form>
+
+  <br><br><br>
+  <nav>
+  <ul>
+  <li><a href= 'captureFile' download>eth/ip header download</a></li>
+  <li><a href= 'TCP' download>TCP download</a></li>
+  <li><a href= 'UDP' download>UDP download</a></li>
+  <li><a href= 'ICMP' download>ICMP download</a></li>
+  <li><a href= 'PayLoad' download>payload File download</a></li>
+  <li><a href= 'allFile' download>allFile download</a></li>
+  <br>
+  <li><a href= 'captureFile.csv' download target"_self">eth/ip csvFile download</a></li>
+  <li><a href= 'tcp.csv' download target"_self">tcp csvFile download</a></li>
+  <li><a href= 'udp.csv' download target"_self">udp csvFile download</a></li>
+  <li><a href= 'icmp.csv' download target"_self">icmp csvFile download</a></li>
+  </ul></nav>
+	</form>
+	<br><br><br><br><br><br>
+	<br><br><br><br><br><br>
+	<br>
+	<br><br><br><br><br><br>
+	<br><br><br><br><br><br>
+	<br>
+</fieldset>
+<style>
+	body{
+	background-image : url("https://ifh.cc/g/BCvsTm.jpg");
+	background-repeat:no-repeat;
+	background-size: cover;
+	
+	}<style/>
+</body>
+</html>

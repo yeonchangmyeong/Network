@@ -1,0 +1,36 @@
+ <html>
+<head>
+
+    <title> Login Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+	<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="utf-8"/>
+<br><br><br><h1 align="center" >휴먼 네트워크<br><br>네트워크 패킷 캡처 프로그램</h1><br>
+<div id="frm">
+	<nav>
+		<ul>
+		<li><a href="HowToUse.html">HowToUse</a></li>
+		</ul>
+	</nav>
+    <form action="logindb.php" method="POST">
+                
+        <p style="text-align: center">
+		<B><label>Username :</label></B>
+		<input type="text" id="user" name="user" placeholder="Username"/><br><br>
+           	 <B><label>Password :</label></B>
+                <input type="password" id="pass" name="pass" placeholder="Password"/>
+		<br>
+                <input type="submit" id="btn" value="로그인" />
+		<!--<a href="resistration.html" class="btn btn-info btn-block m-t-md"> 회원가입</a>-->
+		 <input type="button"id="btn" value= "회원가입" onClick="location.href='resistration.html'"/>
+    		</p>      
+    </form>
+</div>
+</body>
+
+</html>
+

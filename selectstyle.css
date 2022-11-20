@@ -1,0 +1,59 @@
+
+	body{
+	background-image : url("https://ifh.cc/g/BCvsTm.jpg");
+	background-repeat:no-repeat;
+	background-size: cover;
+	
+	}
+#frm{
+    border: 1px solid lightgray;
+    width: 90%;
+    border-radius: 30px;;
+    margin: 80px auto;
+    background: white;
+    padding: 0px 25px;
+}
+#btn{
+	font-size:10pt;
+    color: white;
+    background: #8aa1a1;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    width: 30%;
+    border: 0;
+}
+#input{
+width: 50%;
+	background:lightgray;
+border:1px solid gray;
+border-radius: 5px;
+color:black;
+}
+#btn{
+	font-size:10pt;
+    color: white;
+    background: #BDBDBD;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    width: 30%;
+    border: 0;
+}
+nav{margin-top:10px; margin-bottom:20px;}
+nav ul{
+	list-style: none;
+	border-top: 1px solid lightgray;
+	border-bottom: 1px solid lightgray;
+	text-align: center;
+}
+nav ul li{
+	
+	display: inline;
+letter-spacing: .3em;
+margin-left:2em}
+nav ul li a{
+	text-decoration: none;
+	color: black;
+	line-height: 3em;
+}

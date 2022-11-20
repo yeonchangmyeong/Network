@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>result</title>
+    <style>
+      body {
+        font-family: Consolas, monospace;
+        font-family: 12px;
+      }
+      table {
+        width: 100%;
+      }
+      th, td {
+        padding: 10px;
+        border-bottom: 1px solid #dadada;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>eth</th>
+          <th>srcaddr</th>
+          <th>dstmac</th>
+	  <th>ipversion</th>
+	  <th>iplength</th>
+	  <th>service</th>
+	  <th>iptotallength</th>
+	  <th>iden</th>
+	  <th>ttl</th>
+	  <th>protocol</th>
+	  <th>checksum</th>
+        </tr>
+      </thead>
+      <tbody>
+	<?php
+  		$jb_conn = mysqli_connect( 'localhost', 'root', '12345678', 'capture' );
+ 		$jb_sql = "SELECT * FROM capture;";
+  		$jb_result = mysqli_query( $jb_conn, $jb_sql );
+  		while( $jb_row = mysqli_fetch_array( $jb_result ) ) {
+			echo
+				'<p>'
+				. $jb_row['EthernetType']
+      				. $jb_row[ 'SrcMacAddr' ]
+      				. $jb_row[ 'DstMacAddr' ]
+      				. $jb_row[ 'IPversion' ]
+      				. $jb_row[ 'IpHeaderLength' ]
+      				 $jb_row[ 'TypeOfService' ]
+      				. $jb_row[ 'IptotalLength' ]
+      				. $jb_row[ 'Identification' ]
+      				. $jb_row[ 'TimetoLive' ]
+      				. $jb_row[ 'Protocol' ]
+      				. $jb_row[ 'IpChecksum' ]
+      				. $jb_row[ 'SrcIpAddr' ]
+      				. $jb_row[ 'DstIpAddr' ]
+      				. $jb_row[ 'SourcePort' ]
+      				. $jb_row[ 'DestPort' ]
+      				. $jb_row[ 'SequenceNumber' ]
+      				. $jb_row[ 'AcknowledgeNumber' ]
+      				. $jb_row[ 'OffSetHeaderLength' ]
+      				. $jb_row[ 'URGFkag' ]
+      				. $jb_row[ 'AckFlag' ]
+      				. $jb_row[ 'PushFlag' ]
+      				. $jb_row[ 'ResetFlag' ]
+      				. $jb_row[ 'SynFlag' ]
+      				. $jb_row[ 'FinishFlag' ]
+      				. $jb_row[ 'windowSize' ]
+      				. $jb_row[ 'TcpChecksum' ]
+      				. $jb_row[ 'UrgPointer' ]
+      				.'</p>';
+  }
+?>
+      </tbody>
+    </table>
+  </body>
+</html>
